@@ -1,0 +1,85 @@
+{
+    "search": {
+        "nbresults": 9381,
+        "typedetransaction": ["vente", "viager"],
+        "nbpieces": null,
+        "typedebien": ["Appartement", "Maison/Villa"],
+        "pays": "FR",
+        "nbchambres": null,
+        "budget": { "min": null, "max": null },
+        "surface": { "min": "2", "max": null },
+        "surface_terrain": { "min": null, "max": null },
+        "etage": { "min": "0", "max": null },
+        "tri": { "criteria": "Sélection" },
+        "chauffage": [
+            { "name": "individuel", "value": false },
+            { "name": "central", "value": false },
+            { "name": "electrique", "value": false },
+            { "name": "gaz", "value": false },
+            { "name": "fuel", "value": false },
+            { "name": "radiateur", "value": false },
+            { "name": "sol", "value": false }
+        ],
+        "cuisine": [
+            { "name": "cuisine separee", "value": false },
+            { "name": "cuisine americaine", "value": false },
+            { "name": "coin cuisine", "value": false },
+            { "name": "cuisine equipee", "value": false }
+        ],
+        "naturebien": [
+            { "name": "investissement", "value": false },
+            { "name": "viager", "value": true },
+            { "name": "courte duree", "value": false },
+            { "name": "meuble", "value": false },
+            { "name": "nonmeuble", "value": false },
+            { "name": "ancien", "value": true },
+            { "name": "neuf", "value": true },
+            { "name": "construire", "value": true },
+            { "name": "luxe", "value": false }
+        ],
+        "supplement": [
+            { "name": "avecPhoto", "value": false },
+            { "name": "visiteVirtuelle", "value": false },
+            { "name": "evolutionPrix", "value": false },
+            { "name": "exclusivites", "value": false },
+            { "name": "professionnels", "value": true },
+            { "name": "avecVideo", "value": false }
+        ],
+        "amenagements": [
+            { "name": "salleAmanger", "value": false },
+            { "name": "sejour", "value": false },
+            { "name": "toiletteSeparee", "value": false },
+            { "name": "salleDeBain", "value": false },
+            { "name": "salleDEau", "value": false },
+            { "name": "entreeSepare", "value": false }
+        ],
+        "commodites": [
+            { "name": "terrasse", "value": false },
+            { "name": "balcon", "value": false },
+            { "name": "cheminee", "value": false },
+            { "name": "parquet", "value": false },
+            { "name": "climatisation", "value": false },
+            { "name": "alarme", "value": false },
+            { "name": "placards", "value": false },
+            { "name": "dernier etage", "value": false },
+            { "name": "ascenseur", "value": false },
+            { "name": "parking ouvert", "value": false },
+            { "name": "box", "value": false },
+            { "name": "cave", "value": false },
+            { "name": "piscine", "value": false },
+            { "name": "interphone", "value": false },
+            { "name": "digicode", "value": false },
+            { "name": "gardien", "value": false },
+            { "name": "handicape", "value": false }
+        ],
+        "situation": [
+            { "name": "sud", "value": false },
+            { "name": "belleVue", "value": false },
+            { "name": "sansVisAVis", "value": false }
+        ],
+        "localites": [{ "type": "departement", "value": ["75"] }]
+    },
+    "zipCodes": [],
+    "geoDpCodes": ["75"],
+    "summary": ["Achat", "Paris", "Appartement"]
+}
