@@ -7,7 +7,7 @@ def response_fixture():
         "metadata": {
             "search": {
                 "nbresults": 9414,
-                "budget": {"min": "300000", "max": None},
+                "budget": {"min": "300000", "max": "700000"},
                 "surface": {"min": "35", "max": None},
                 "commodites": [
                     {"name": "terrasse", "value": False},
@@ -15,7 +15,7 @@ def response_fixture():
                 ],
                 "situation": [
                     {"name": "belleVue", "value": True},
-                    {"name": "sansVisAVis", "value": False},
+                    {"name": "sansVisAVis", "value": True},
                 ],
             },
             "summary": ["Achat", "Paris", "Appartement"],
