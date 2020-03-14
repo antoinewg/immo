@@ -1,0 +1,72 @@
+FILTERS_NAME_VALUE = {
+    "chauffage": [
+        "individuel",
+        "central",
+        "electrique",
+        "gaz",
+        "fuel",
+        "radiateur",
+        "sol",
+    ],
+    "cuisine": [
+        "cuisine separee",
+        "cuisine americaine",
+        "coin cuisine",
+        "cuisine equipee",
+    ],
+    "naturebien": [
+        "investissement",
+        "viager",
+        "courte duree",
+        "meuble",
+        "nonmeuble",
+        "ancien",
+        "neuf",
+        "construire",
+        "luxe",
+    ],
+    "supplement": [
+        "avecPhoto",
+        "visiteVirtuelle",
+        "evolutionPrix",
+        "exclusivites",
+        "professionnels",
+        "avecVideo",
+    ],
+    "amenagements": [
+        "salleAmanger",
+        "sejour",
+        "toiletteSeparee",
+        "salleDeBain",
+        "salleDEau",
+        "entreeSepare",
+    ],
+    "commodites": [
+        "terrasse",
+        "balcon",
+        "cheminee",
+        "parquet",
+        "climatisation",
+        "alarme",
+        "placards",
+        "dernier etage",
+        "ascenseur",
+        "parking ouvert",
+        "box",
+        "cave",
+        "piscine",
+        "interphone",
+        "digicode",
+        "gardien",
+        "handicape",
+    ],
+    "situation": ["sud", "belleVue", "sansVisAVis"],
+}
+
+
+FILTERS_MIN_MAX = {
+    "budget": {"min": None, "max": None},
+    "surface": {"min": None, "max": None},
+    "surface_terrain": {"min": None, "max": None},
+}
+
