@@ -1,7 +1,7 @@
 import json
 import requests
 
-from utils import get_metadata, logs
+from .utils import get_metadata, log
 
 url = "https://www.seloger.com/list/api/externaldata"
 

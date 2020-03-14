@@ -1,4 +1,4 @@
-import constants
+from .constants import FILTERS_NAME_VALUE, FILTERS_MIN_MAX
 
 
 def log(string):
@@ -12,13 +12,13 @@ def get_metadata(response):
     res = f"\nFetched {search.get('nbresults')} results in {' > '.join(metadata.get('summary'))}.\n"
 
     # Display which filters where selected (yes/no type)
-    for category in constants.FILTERS_NAME_VALUE:
+    for category in FILTERS_NAME_VALUE:
         active = [el.get("name") for el in search.get(category) if el.get("value")]
         if len(active):
             res += f"\t- {category}: {', '.join(active)}\n"
 
     # Display the "range" filters
-    for category in constants.FILTERS_MIN_MAX:
+    for category in FILTERS_MIN_MAX:
         mini, maxi = search.get(category).get("min"), search.get(category).get("max")
         if mini or maxi:
             res += f"\t- {category}: [{mini if mini else ''}, {maxi if maxi else ''}]\n"
