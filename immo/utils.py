@@ -14,7 +14,7 @@ def get_metadata(response):
     # Display which filters where selected (yes/no type)
     for category in FILTERS_NAME_VALUE:
         active = [el.get("name") for el in search.get(category, {}) if el.get("value")]
-        if len(active):
+        if len(active) > 0:
             res += f"\t- {category}: {', '.join(active)}\n"
 
     # Display the "range" filters

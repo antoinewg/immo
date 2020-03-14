@@ -69,4 +69,3 @@ FILTERS_MIN_MAX = {
     "surface": {"min": None, "max": None},
     "surface_terrain": {"min": None, "max": None},
 }
-
