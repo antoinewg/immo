@@ -1,6 +1,7 @@
 # immo
 
 [![Build Status](https://travis-ci.com/antoinewg/immo.svg?branch=master)](https://travis-ci.com/antoinewg/immo)
+[![codecov](https://codecov.io/gh/antoinewg/immo/branch/master/graph/badge.svg)](https://codecov.io/gh/antoinewg/immo)
 
 ### Installation
 
