@@ -1,4 +1,4 @@
-# immo
+# immo 🏠
 
 [![Build Status](https://travis-ci.com/antoinewg/immo.svg?branch=master)](https://travis-ci.com/antoinewg/immo)
 [![codecov](https://codecov.io/gh/antoinewg/immo/branch/master/graph/badge.svg)](https://codecov.io/gh/antoinewg/immo)
@@ -27,3 +27,12 @@ _Options_:
 
 -   `<path_to_file>::<test_name>`: only run a specific test,
 -   `s`: debugger enabled: you can use `ipdb` 👍.
+
+### Next steps
+
+-   [ ] Setup Django and postgresql
+-   [ ] Configure a cron to refresh data every hour `0 * * * *`
+-   [ ] Frontend to visualize data
+-   [ ] Monitoring of cron + alert if nice appart available
+-   [ ] Deploy back & front
+-   [ ] Recommendation system using Bayesian optimisation.
