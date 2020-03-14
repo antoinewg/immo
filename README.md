@@ -1,5 +1,7 @@
 # immo
 
+[![Build Status](https://travis-ci.com/antoinewg/immo.svg?branch=master)](https://travis-ci.com/antoinewg/immo)
+
 ### Installation
 
 **Steps**:
