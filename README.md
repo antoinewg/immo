@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/antoinewg/immo.svg?branch=master)](https://travis-ci.com/antoinewg/immo)
 [![codecov](https://codecov.io/gh/antoinewg/immo/branch/master/graph/badge.svg)](https://codecov.io/gh/antoinewg/immo)
 
-### Installation
+## Installation
 
 **Steps**:
 
@@ -13,13 +13,19 @@
 
 You're ready to go 🚀!
 
+Run `make serve` and visit [localhost](http://127.0.0.1:8001) to start.
+
+## Development
+
+#### Dependencies
+
 To update dependencies:
 
 -   Install dependency: `pip install <library>`
 -   Freeze requirements: `make freeze`
 -   Commit "requirements.txt"
 
-### Tests
+#### Tests
 
 Launch the test using: `python -m pytest`
 
@@ -28,7 +34,7 @@ _Options_:
 -   `<path_to_file>::<test_name>`: only run a specific test,
 -   `s`: debugger enabled: you can use `ipdb` 👍.
 
-### Next steps
+## Next steps
 
 -   [ ] Setup Django and postgresql
 -   [ ] Configure a cron to refresh data every hour `0 * * * *`
