@@ -1,7 +1,7 @@
 import json
 import requests
 
-from .utils import get_metadata, log
+from .utils import extract_advertisement, get_metadata, log
 
 url = "https://www.seloger.com/list/api/externaldata"
 
@@ -19,8 +19,8 @@ headers = {
 
 data = '{"enterprise":false,"projects":[2,5],"types":[1,2],"places":[{"label":"Paris","dpCode":["75"]}],"natures":[1,2,4]}'
 
-response = requests.post(url, headers=headers, data=data)
-res = json.loads(response.content)
+response = json.loads(requests.post(url, headers=headers, data=data).content)
 
-metadata = res.get("metadata")
-log(get_metadata(res))
+log(get_metadata(response))
+
+df = extract_advertisement(response)

@@ -1,3 +1,5 @@
+import pandas as pd
+
 from .constants import FILTERS_NAME_VALUE, FILTERS_MIN_MAX
 
 
@@ -27,3 +29,9 @@ def get_metadata(response):
             res += f"\t- {category}: [{mini if mini else ''}, {maxi if maxi else ''}]\n"
 
     return res
+
+
+def extract_advertisement(response):
+    items = response.get("classifiedsData").get("classifieds")
+    log(items)
+    return pd.DataFrame(items)
