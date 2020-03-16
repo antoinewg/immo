@@ -21,4 +21,3 @@ def response_fixture():
             "summary": ["Achat", "Paris", "Appartement"],
         }
     }
-

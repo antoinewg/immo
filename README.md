@@ -9,14 +9,14 @@
 
 -   Create virtual environment: `python3 -m venv venv`
 -   Activate it: `source ./venv/bin/activate`
--   Install dependencies: `pip install -r requirements.txt`
+-   Install dependencies: `make install``
 
 You're ready to go 🚀!
 
 To update dependencies:
 
 -   Install dependency: `pip install <library>`
--   Freeze requirements: `pip freeze > requirements.txt`
+-   Freeze requirements: `make freeze`
 -   Commit "requirements.txt"
 
 ### Tests
