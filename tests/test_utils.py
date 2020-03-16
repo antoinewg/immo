@@ -1,4 +1,4 @@
-from immo.utils import get_metadata
+from parser.utils import get_metadata
 
 
 def test_get_metadata(response):

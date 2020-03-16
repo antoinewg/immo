@@ -6,3 +6,6 @@ freeze:
 
 lint:
 	black .
+
+test:
+	python -m pytest
