@@ -9,7 +9,8 @@
 
 -   Create virtual environment: `python3 -m venv venv`
 -   Activate it: `source ./venv/bin/activate`
--   Install dependencies: `make install``
+-   Install dependencies: `make install`
+-   Launch `python manage.py genfixtures` to generate data.
 
 You're ready to go 🚀!
 
