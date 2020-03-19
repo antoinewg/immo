@@ -3,6 +3,7 @@ import time
 
 from django.core.management.base import BaseCommand
 
+from listing.enums import ESTATE_TYPE
 import listing.models as models
 
 
@@ -85,7 +86,9 @@ class Command(BaseCommand):
                         highlighting_level=listing.get("highlightingLevel"),
                         business_unit=listing.get("businessUnit"),
                         photos_qty=listing.get("photosQty", -1),
-                        estate_type=listing.get("estateType"),
+                        estate_type=ESTATE_TYPE(
+                            listing.get("estateType") or "appartment"
+                        ).name,
                         transaction_type=listing.get("transactionType"),
                         service_url=listing.get("serviceUrl"),
                         nature=listing.get("nature"),
