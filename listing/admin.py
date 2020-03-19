@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.utils.text import Truncator
+import django.db.models
 
 from . import models
 
@@ -43,3 +43,20 @@ class ListingAdmin(admin.ModelAdmin):
         "zip_code",
     ]
     search_fields = ("city_label", "description")
+
+    def get_queryset(self, request):
+        qs = super(ListingAdmin, self).get_queryset(request)
+        qs = qs.annotate(min_price=django.db.models.Min("pricings__price"))
+        qs = qs.annotate(
+            min_square_meter_price=django.db.models.Min("pricings__square_meter_price")
+        )
+        return qs
+
+    def price(self, obj):
+        return obj.min_price
+
+    def square_meter_price(self, obj):
+        return obj.min_square_meter_price
+
+    price.admin_order_field = "min_price"
+    square_meter_price.admin_order_field = "min_square_meter_price"
