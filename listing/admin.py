@@ -25,9 +25,10 @@ class PricingAdmin(admin.ModelAdmin):
 @admin.register(models.Listing)
 class ListingAdmin(admin.ModelAdmin):
     list_display = [
-        "id",
-        "publication_id",
-        "estate_type",
+        "classified_url",
+        "square_meter",
+        "price",
+        "square_meter_price",
         "room_qty",
         "bedroom_qty",
         "transaction_type",
@@ -42,8 +43,3 @@ class ListingAdmin(admin.ModelAdmin):
         "zip_code",
     ]
     search_fields = ("city_label", "description")
-
-    def overview_description(self, listing):
-        return Truncator(listing.description).chars(40, truncate="...")
-
-    overview_description.short_description = "Description"

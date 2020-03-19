@@ -1,7 +1,7 @@
 import json
 import requests
 
-from .utils import get_metadata, log
+from .utils import get_listings_from_response, get_metadata, log
 
 url = "https://www.seloger.com/list/api/externaldata?from=0&size=25&isSeo=false"
 
@@ -23,3 +23,5 @@ data = '{"enterprise":false,"projects":[2,5],"types":[1,2],"places":[{"label":"P
 response = json.loads(requests.post(url, headers=headers, data=data).content)
 
 log(get_metadata(response))
+
+log(len(get_listings_from_response(response)))

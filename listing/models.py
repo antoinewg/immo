@@ -37,7 +37,7 @@ class Listing(models.Model):
         Contact, on_delete=models.PROTECT, related_name="listing"
     )
     service_url = models.URLField()
-    is_exlusive = models.BooleanField(blank=True, null=True)
+    is_exclusive = models.BooleanField(blank=True, null=True)
     city_label = models.CharField(max_length=48)
     district_label = models.CharField(max_length=100)
     zip_code = models.IntegerField(db_index=True)
@@ -45,6 +45,18 @@ class Listing(models.Model):
     video_url = models.URLField(blank=True, null=True)
     virtual_visit_url = models.URLField(blank=True, null=True)
     classified_url = models.URLField(blank=True, null=True)
+
+    @property
+    def latest_pricing(self):
+        return self.pricings.order_by("first_saved_at").last()
+
+    @property
+    def price(self):
+        return self.latest_pricing.price
+
+    @property
+    def square_meter_price(self):
+        return self.latest_pricing.square_meter_price
 
 
 class Pricing(models.Model):

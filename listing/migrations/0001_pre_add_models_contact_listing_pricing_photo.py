@@ -48,7 +48,7 @@ class Migration(migrations.Migration):
                 ("transaction_type", models.IntegerField()),
                 ("nature", models.IntegerField()),
                 ("service_url", models.URLField()),
-                ("is_exlusive", models.BooleanField(blank=True, null=True)),
+                ("is_exclusive", models.BooleanField(blank=True, null=True)),
                 ("city_label", models.CharField(max_length=48)),
                 ("district_label", models.CharField(max_length=100)),
                 ("zip_code", models.IntegerField(db_index=True)),

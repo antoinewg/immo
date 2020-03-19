@@ -83,14 +83,14 @@ class Command(BaseCommand):
                     transaction_type=listing.get("transactionType"),
                     service_url=listing.get("serviceUrl"),
                     nature=listing.get("nature"),
-                    is_exlusive=listing.get("isExlusive"),
+                    is_exclusive=listing.get("isExclusive"),
                     city_label=listing.get("cityLabel"),
                     district_label=listing.get("districtLabel") or "",
                     zip_code=listing.get("zipCode"),
                     description=listing.get("description"),
-                    video_url=listing.get("videoUrl"),
-                    virtual_visit_url=listing.get("virtualVisitUrl"),
-                    classified_url=listing.get("classifiedUrl"),
+                    video_url=listing.get("videoURL"),
+                    virtual_visit_url=listing.get("virtualVisitURL"),
+                    classified_url=listing.get("classifiedURL"),
                 )
 
             listing_ids |= set([listing_id])
