@@ -25,6 +25,7 @@ class PricingAdmin(admin.ModelAdmin):
 @admin.register(models.Listing)
 class ListingAdmin(admin.ModelAdmin):
     list_display = [
+        "id",
         "classified_url",
         "square_meter",
         "price",
@@ -37,10 +38,10 @@ class ListingAdmin(admin.ModelAdmin):
     date_hierarchy = "first_saved_at"
     list_filter = [
         "estate_type",
+        "zip_code",
+        "transaction_type",
         "room_qty",
         "bedroom_qty",
-        "transaction_type",
-        "zip_code",
     ]
     search_fields = ("city_label", "description")
 
