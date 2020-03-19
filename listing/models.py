@@ -10,7 +10,7 @@ class Contact(models.Model):
     agency_page = models.URLField()
     contact_name = models.CharField(max_length=256)
     img_url = models.URLField()
-    phone_number = models.CharField(max_length=12)
+    phone_number = models.CharField(max_length=32)
     email = models.BooleanField()
     agency_link = models.URLField()
 
