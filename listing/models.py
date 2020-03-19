@@ -61,7 +61,7 @@ class Pricing(models.Model):
 
 
 class Photo(models.Model):
-    uid = models.UUIDField(primary_key=True)
+    uid = models.UUIDField(primary_key=True, default=uuid.uuid4)
     listing = models.ForeignKey(
         Listing, on_delete=models.PROTECT, related_name="photos"
     )

@@ -10,11 +10,13 @@ class Command(BaseCommand):
     help = "Some useful objects to start using immo in dev."
 
     def handle(self, *args, **options):
+        models.Photo.objects.all().delete()
         models.Pricing.objects.all().delete()
         models.Listing.objects.all().delete()
         models.Contact.objects.all().delete()
 
         listings = utils.get_listings_from_response(MOCK_RESPONSE)
+        utils.log(f"Generating fixtures from {len(listings)} listing...")
 
         contact_ids = set()
         listing_ids = set()
@@ -107,9 +109,10 @@ class Command(BaseCommand):
                 loan_service_url=listpricing.get("loanServiceUrl"),
             )
 
-            # Create photos
-            # "https://v.seloger.com/s/width/400/visuels/1/8/g/m/18gmwaa0mrc089r86m0ktofrpxrudcuozkqw9tu1g.jpg",
-            # "https://v.seloger.com/s/width/400/visuels/1/e/5/c/1e5cni6b1ql7hgfhfyj5zu0enh81qo8cck0bjqq8k.jpg",
-            # "https://v.seloger.com/s/width/400/visuels/0/v/1/l/0v1l7mk26s1yx4rdiauuu1gbhglfsk78v6s38nmms.jpg",
-            # "https://v.seloger.com/s/width/400/visuels/0/w/u/b/0wubh3b27bnyo4zatra63xvh9iv1igd5irm4ijot0.jpg",
-            # "https://v.seloger.com/s/width/400/visuels/1/u/e/o/1ueolk16bzfd1r8dmmuv779oyx6ldd9q4c6mfh104.jpg",
+            listphotos = listing.get("photos", [])
+            for photo_url in listphotos:
+                models.Photo.objects.create(
+                    listing=listing_object, photo_url=photo_url,
+                )
+
+        utils.log("Successfully generated fixtures ! 🎉")
