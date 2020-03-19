@@ -1,5 +1,3 @@
-import pandas as pd
-
 from .constants import FILTERS_NAME_VALUE, FILTERS_MIN_MAX
 
 
@@ -31,7 +29,5 @@ def get_metadata(response):
     return res
 
 
-def extract_advertisement(response):
-    items = response.get("classifiedsData").get("classifieds")
-    log(items)
-    return pd.DataFrame(items)
+def get_listings_from_response(response):
+    return response.get("classifiedsData").get("classifieds")
