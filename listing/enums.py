@@ -10,3 +10,7 @@ def choices(enumeration):
 
 class ESTATE_TYPE(enum.Enum):
     appartment = "Appartement"
+    appartment_viager = "Appartement en viager"
+    maison_villa = "Maison/Villa"
+    maison_villa_viager = "Maison/Villa en viager"
+    projet_construction = "Projet de construction"
