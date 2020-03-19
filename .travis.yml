@@ -9,6 +9,6 @@ before_install:
     - pip install pytest-cov
 install:
     - pip install -r requirements.txt
-script: python -m pytest --cov-report=xml --cov=immo tests/ # run tests
+script: python -m pytest --cov-report=xml --cov=. tests/ # run tests
 after_success:
     - codecov # submit coverage
